@@ -22,7 +22,7 @@ exports.getFeed = function (tags, res) {
             throw new Error(err);
         }
 
-        // remove some suffix to have a clean json format
+        // remove jsonFlickrFeed function wrapper
         let resultString = body.replace(/[A-Za-z]*\(/, '').replace();
         resultString = resultString.substring(0, resultString.length - 1);
 
